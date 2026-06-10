@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <title>Objave</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div id="nav">
+    <strong>SocialApp</strong>
+    <span id="navUser"></span>
+    <button onclick="logout()">Odjava</button>
+  </div>
+
+  <h2>Objave</h2>
+
+  <div class="card">
+    <textarea id="postText" rows="3" placeholder="Kaj se dogaja?"></textarea><br>
+    <input type="file" id="postImage" accept="image/*">
+    <button onclick="new_post()">Objavi</button>
+    <p id="postMsg"></p>
+  </div>
+
+  <input type="text" id="search" placeholder="Išči objave..." oninput="load_posts()">
+
+  <div id="feed"></div>
+
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+  <script>
+    window.onload = async function() {
+      const res  = await fetch("/api/me");
+      const data = await res.json();
+      if (data.error) { window.location.href = "/login"; return; }
+      currentUserId = data.user_id;
+      document.getElementById("navUser").textContent = data.username;
+      load_posts();
+    }
+  </script>
+</body>
+</html>

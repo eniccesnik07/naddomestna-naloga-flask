@@ -1,0 +1,20 @@
+{
+    "users": {
+        "1": {
+            "username": "enej",
+            "password": "scrypt:32768:8:1$DoAeaHaz12acsQxY$f73514106481864f43da144154b1cdf5dcfaf807a6b4048887ca27c9cd31697a46bb6115d62970d37dda499a737d26aec4d087f6baf1b7e5fa68e42c75706958"
+        },
+        "2": {
+            "username": "wng_",
+            "password": "scrypt:32768:8:1$0yVxQaJAyBDia3vH$5aa1837c5553cc3e28b4fbfab400f3248caf7edb88d961f1f7646672bbceddfd5c94e546f76ea1c3f1577b67dc2bd11e16f9b7af9efd9356981897b3a3b6b45e"
+        }
+    },
+    "posts": {
+        "1": {
+            "user_id": 1,
+            "text": "adfasdfa",
+            "image_path": null,
+            "created_at": "2026-06-09 23:29:23"
+        }
+    }
+}

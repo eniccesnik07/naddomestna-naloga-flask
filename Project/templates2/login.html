@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <title>Prijava – Social</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Prijava</h1>
+  <p id="msg"></p>
+
+  <input type="text" id="username" placeholder="Uporabniško ime"><br>
+  <input type="password" id="password" placeholder="Geslo"><br>
+  <button onclick="login()">Prijava</button>
+  <p>Nimaš računa? <a href="/register">Registracija</a></p>
+
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

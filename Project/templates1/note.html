@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zapisek</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div id="nav">
+    <a href="/">← Nazaj</a>
+  </div>
+
+  <h2 id="pageTitle">Nov zapisek</h2>
+  <p id="msg"></p>
+
+  <input type="text" id="title" placeholder="Naslov"><br>
+  <textarea id="content" rows="8" placeholder="Vsebina..."></textarea><br>
+  <button onclick="save()">Shrani</button>
+  <span id="autosave"></span>
+
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <title>Profil</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div id="nav">
+    <a href="/">← Nazaj</a>
+  </div>
+
+  <h2 id="profileName"></h2>
+  <p id="postCount"></p>
+  <div id="profilePosts"></div>
+
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

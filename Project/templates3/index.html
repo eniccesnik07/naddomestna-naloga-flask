@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <title>Vremenski dnevnik</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div id="nav">
+    <strong>Vremenski dnevnik</strong>
+    <button onclick="clear_history()">Počisti zgodovino</button>
+  </div>
+
+  <input type="text" id="citySearch" placeholder="Išči mesto..." oninput="search_city()">
+  <div id="suggestions"></div>
+
+  <div id="favSection"></div>
+  <div id="recentSection"></div>
+
+  <div id="weatherResult"></div>
+
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+  <script>
+    window.onload = function() {
+      load_sidebar();
+    }
+  </script>
+</body>
+</html>

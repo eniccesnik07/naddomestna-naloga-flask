@@ -1,0 +1,20 @@
+{
+    "users": {
+        "1": {
+            "username": "enej",
+            "password": "scrypt:32768:8:1$Pmrsob6r45XsdWHQ$106dcfaf48a3cf3a038e30302ac23a12c828c0ea2d65cc7a4c6c97cc20a31a73f9618b836b46456704db80ec7987bbc1abd6471aa7df0e1b922f646055d46bf1"
+        },
+        "2": {
+            "username": "wng_",
+            "password": "scrypt:32768:8:1$Ez6hXiiuHAdj1ekM$cb1734e49f8993029e0434da1af9900e4e13f3039b22ad21b20e95916664d4054d16e1c2a2cf44b1198ac84518eec33532a3dd0b2d37115e0662a9e590bf8dea"
+        }
+    },
+    "notes": {
+        "1": {
+            "user_id": 1,
+            "title": "adfhlkjha",
+            "content": "asdddddddddddddddd",
+            "created_at": "2026-06-09 23:29:39"
+        }
+    }
+}

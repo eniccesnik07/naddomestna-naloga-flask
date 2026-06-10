@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <title>Moji zapiski</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div id="nav">
+    <strong>Zapiski</strong>
+    <span id="navUser"></span>
+    <button onclick="logout()">Odjava</button>
+  </div>
+
+  <h2>Moji zapiski</h2>
+  <input type="text" id="search" placeholder="Išči..." oninput="load_notes()">
+  <button onclick="window.location.href='/note'">+ Nov zapisek</button>
+
+  <div id="noteList"></div>
+
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+  <script>
+    window.onload = async function() {
+      const res  = await fetch("/api/me");
+      const data = await res.json();
+      if (data.error) { window.location.href = "/login"; return; }
+      document.getElementById("navUser").textContent = data.username;
+      load_notes();
+    }
+  </script>
+</body>
+</html>
